@@ -10,14 +10,15 @@
 
 #import <Cordova/CDVPlugin.h>
 
-@interface AGApplicationPreferences : CDVPlugin 
-{
+@interface AGApplicationPreferences : CDVPlugin { }
 
-}
+- (void)get:(CDVInvokedUrlCommand*)command;
+- (void)set:(CDVInvokedUrlCommand*)command;
 
--	(void) getSetting:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
--	(void) setSetting:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
--	(NSString*) getSettingFromBundle:(NSString*)settingName;
-
+// not supported
+- (void)remove:(CDVInvokedUrlCommand*)command;
+- (void)clear:(CDVInvokedUrlCommand*)command;
+- (void)load:(CDVInvokedUrlCommand*)command;
+- (void)show:(CDVInvokedUrlCommand*)command;
 
 @end
